@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test child test child render 1`] = `
+<div>
+  Child
+</div>
+`;
+
+exports[`test child test render 1`] = `
+<div>
+  Child
+</div>
+`;
+
+exports[`test index test render 1`] = `
+<div>
+  Child
+</div>
+`;
