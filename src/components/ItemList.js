@@ -1,7 +1,8 @@
 import React from 'react';
-import ListItem from './list-item';
+import PropTypes from 'prop-types';
+import ListItem from './ListItem';
 
-export default (props) => {
+const ItemList =  props => {
 	if(!props.data.length) {
 		return <div>List is empty!</div>;
 	}
@@ -38,3 +39,16 @@ export default (props) => {
 		</table>
 	);
 }
+
+ItemList.propTypes = {
+	data: PropTypes.array.isRequired,
+	listId: PropTypes.number.isRequired,
+	handleChange: PropTypes.func.isRequired,
+	handleRemove: PropTypes.func.isRequired,
+	handleLike: PropTypes.func.isRequired,
+	handleDislike: PropTypes.func.isRequired,
+	handleAdd: PropTypes.func.isRequired,
+	handleSort: PropTypes.func.isRequired
+}
+export default ItemList;
+

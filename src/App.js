@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import ItemList from './components/item-list';
-import AddItem from './components/add-item';
+import ItemList from './components/ItemList';
+import AddItem from './components/AddItem';
 
 const cache=[];
 
@@ -225,7 +225,8 @@ class App extends Component {
   renderItemList(listId) {
     return <ItemList 
       listId={listId}
-      data={ listId === 1 ? 
+      data={ 
+        listId === 1 ? 
         (this.state.search ? this.state.allList : this.state.results) :
         (listId === 2 ? this.state.likeList : this.state.dislikeList)
       }
